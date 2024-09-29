@@ -174,7 +174,7 @@ public class Contacto extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         // Crear el mensaje con varias líneas usando etiquetas HTML
-        String mensaje = "<html>Empresa: PERU TALENTO S.A.C<br> <br> Desarrolladores:<br>GALA PEREZ JHORDY ALEXANDER<br>DEYVI<br>FRANCO<br>RANDALL<br>EVERgggg </html>";
+        String mensaje = "<html>Empresa: PERU TALENTO S.A.C<br> <br> Desarrolladores:<br>Gala Perez, Jhordy Alexander<br>DEYVI<br>FRANCO<br>RANDALL<br>EVER<br><br> PeruTalento © 2024 Reservados todos los derechos  </html>";
 
     
         // URL de la imagen en Internet
@@ -199,6 +199,11 @@ public class Contacto extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
+        MenuPrincipal newframe = new MenuPrincipal();
+
+        newframe.setVisible(true);
+
+        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

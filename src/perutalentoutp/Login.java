@@ -231,7 +231,7 @@ private int intentos = 0;
             if ((usuario.equals("admin")) && contrasena.equals("12345")) {
                 JOptionPane.showMessageDialog(null, "Acceso Correcto");
 
-                PruebaFormulario nuevoFormulario = new PruebaFormulario();
+                MenuPrincipal nuevoFormulario = new MenuPrincipal();
                 nuevoFormulario.setVisible(true);
                 dispose(); //CIERRA EL FORMULARIO ACTUAL
             } else {
