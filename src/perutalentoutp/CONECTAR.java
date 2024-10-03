@@ -13,9 +13,9 @@ import java.sql.*;
  */
 public class CONECTAR {
     
-static String url= "jdbc:mysql://localhost:3306/base2";
-static String user= "root";
-static String pass= "FRANCORM";
+static String url= "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10735060";
+static String user= "sql10735060";
+static String pass= "7aYJyJh5zI";
     
 
 public static Connection conectarbase(){
@@ -31,7 +31,6 @@ try
            System.out.println("BASE DE DATOS NO CONECTADA");
       }  
  return con;
- 
  
     
 }
