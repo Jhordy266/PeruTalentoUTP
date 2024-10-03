@@ -24,12 +24,15 @@ Connection con=null;
 try
     {
         con=DriverManager.getConnection(url,user,pass);
-            System.out.println("BASE DE DATOS CONECTADA -- VAMO A DARLE");                 
+            System.out.println("BASE DE DATOS CONECTADA SATISFACTORIAMENTE");                 
     }catch (SQLException e)
       {
           e.printStackTrace();
+           System.out.println("BASE DE DATOS NO CONECTADA");
       }  
  return con;
+ 
+ 
     
 }
 }
