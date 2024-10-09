@@ -92,11 +92,18 @@ public class BuscarPersonaGUI extends JFrame {
             conexion = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
             // Crear la consulta SQL
-            String consulta = "SELECT nombre, universidad, direccion FROM DB_POSTULANTESVF3F WHERE nombre = ?";
+            /*String consulta = "SELECT nombre, universidad, direccion FROM DB_POSTULANTESVF3F WHERE nombre = ?";
             ps = conexion.prepareStatement(consulta);
-            ps.setString(1, nombre);
+            ps.setString(1, nombre);*/
 
-            // Ejecutar la consulta
+            // [INICIO] Modificación para permitir coincidencias parciales
+            // Crear la consulta SQL con LIKE para coincidencia parcial
+            String consulta = "SELECT nombre, universidad, direccion FROM DB_POSTULANTESVF3F WHERE nombre LIKE ?";
+            ps = conexion.prepareStatement(consulta);
+            ps.setString(1, "%" + nombre + "%"); // Buscar coincidencias parciales
+            // [FIN] Modificación para permitir coincidencias parciales
+
+// Ejecutar la consulta
             rs = ps.executeQuery();
 
             // Limpiar el área de resultados antes de mostrar nuevos datos
