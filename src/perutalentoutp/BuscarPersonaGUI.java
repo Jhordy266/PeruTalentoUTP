@@ -15,39 +15,39 @@ import java.sql.SQLException;
 
 public class BuscarPersonaGUI extends JFrame {
 
-    // Componentes de la interfaz gráfica
+    // Lo que vamos a usar en la interfaz
     private JTextField nombreField;
     private JButton buscarButton;
     private JTextArea resultadoArea;
 
-    // Configuración de la conexión a la base de datos
+    // Conexion a la base de datos server con mysql
     private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10735060";
     private static final String DB_USER = "sql10735060";
     private static final String DB_PASSWORD = "7aYJyJh5zI";
 
     public BuscarPersonaGUI() {
-        // Configuración de la ventana
-        setTitle("Buscar Persona");
-        setSize(400, 300);
+        // ajustamos ventanita de programa
+        setTitle("Buscar Talento");
+        setSize(500, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Crear el enunciado y campo de texto
+        // Colocamos el texto de etiqueta
         JLabel nombreLabel = new JLabel("Buscar persona:");
         nombreField = new JTextField(20);
 
-        // Crear el botón de búsqueda
+        // boton de busqueda
         buscarButton = new JButton("Buscar");
 
-        // Crear un área para mostrar el resultado con salto de línea
+        // area de resultado y que salte linea por cada resultado
         resultadoArea = new JTextArea(5, 20);
         resultadoArea.setLineWrap(true);
         resultadoArea.setWrapStyleWord(true);
         resultadoArea.setEditable(false);
 
-        // Usar un JScrollPane para el JTextArea en caso el texto sea largo
+        // le metemos su scroll si es que hay muchas coincidencias
         JScrollPane scrollPane = new JScrollPane(resultadoArea);
 
-        // Crear el layout
+        // Creamos el layout
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setAutoCreateGaps(true);
@@ -72,7 +72,7 @@ public class BuscarPersonaGUI extends JFrame {
                 .addComponent(scrollPane)
         );
 
-        // Acción del botón de búsqueda
+        // le damos la funcion al boton de busqueda
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -88,37 +88,43 @@ public class BuscarPersonaGUI extends JFrame {
         ResultSet rs = null;
 
         try {
-            // Establecer conexión a la base de datos
+              // Conexion a la base de datos server con mysql
             conexion = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
-            // Crear la consulta SQL
-            /*String consulta = "SELECT nombre, universidad, direccion FROM DB_POSTULANTESVF3F WHERE nombre = ?";
+            // Crear la consulta SQL con LIKE para coincidencia parcial esto lo uso Jhordy y le agragamos mas datos de resultado
+            String consulta = "SELECT nombre, universidad, direccion, telefono , Ultimotrabajo  FROM DB_POSTULANTESVF3F WHERE nombre LIKE ?";
             ps = conexion.prepareStatement(consulta);
-            ps.setString(1, nombre);*/
+            ps.setString(1, "%" + nombre + "%"); // Buscar coincidencias parciales que tengan similitud en todo el nombre 
 
-            // [INICIO] Modificación para permitir coincidencias parciales
-            // Crear la consulta SQL con LIKE para coincidencia parcial
-            String consulta = "SELECT nombre, universidad, direccion FROM DB_POSTULANTESVF3F WHERE nombre LIKE ?";
-            ps = conexion.prepareStatement(consulta);
-            ps.setString(1, "%" + nombre + "%"); // Buscar coincidencias parciales
-            // [FIN] Modificación para permitir coincidencias parciales
-
-// Ejecutar la consulta
+            // Ejecutar la consulta dentro de la BD
             rs = ps.executeQuery();
 
-            // Limpiar el área de resultados antes de mostrar nuevos datos
+            // Limpiamos resultados antes de mostrar nuevos resultados
             resultadoArea.setText("");
 
-            // Mostrar los resultados
-            if (rs.next()) {
+            // Procesar los resultados con los pedidos que tenemos
+            int contador = 1;  // Para numerar las personas encontradas
+            while (rs.next()) {
                 String nombreResultado = rs.getString("nombre");
                 String universidad = rs.getString("universidad");
                 String direccion = rs.getString("direccion");
+                String telefono = rs.getString("telefono");
+                String Ultimotrabajo = rs.getString("Ultimotrabajo");
+               
 
-                resultadoArea.append("Nombre: " + nombreResultado + "\n");
-                resultadoArea.append("Universidad: " + universidad + "\n");
+                // Agregar cada linea a los resultado de la busqueda que le hicimos
+                resultadoArea.append(contador + ".\n");
+                resultadoArea.append("Nombre de Postulante: " + nombreResultado + "\n");
+                resultadoArea.append("Carrera Profesional: " + universidad + "\n");
                 resultadoArea.append("Dirección: " + direccion + "\n");
-            } else {
+                resultadoArea.append("Telefono de Contacto: " + telefono + "\n");
+                resultadoArea.append("Ultimo Lugar de Trabajo: " + Ultimotrabajo + "\n\n");
+
+                contador++; // Incrementamos el contador 
+            }
+
+            // Si no hay resultados
+            if (contador == 1) {
                 resultadoArea.setText("Persona no encontrada.");
             }
 
@@ -126,7 +132,7 @@ public class BuscarPersonaGUI extends JFrame {
             e.printStackTrace();
             resultadoArea.setText("Error al conectar con la base de datos.");
         } finally {
-            // Cerrar conexiones y liberar recursos
+            // dejamos de buscar y cerramos consulta
             try {
                 if (rs != null) rs.close();
                 if (ps != null) ps.close();
@@ -136,7 +142,7 @@ public class BuscarPersonaGUI extends JFrame {
             }
         }
     }
-
+            // llamamos a la clase
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -146,3 +152,4 @@ public class BuscarPersonaGUI extends JFrame {
         });
     }
 }
+
