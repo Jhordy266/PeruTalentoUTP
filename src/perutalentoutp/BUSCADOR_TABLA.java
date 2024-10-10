@@ -63,7 +63,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 24)); // NOI18N
         jLabel1.setText("BUSCADOR TALENTO PERÚ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 400, 30));
 
         jLabel2.setText("FORMACION ACADEMICA : ");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, 20));
@@ -100,7 +100,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 130, 30));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PeruTalento1.png"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 96, 260, 260));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 260, 260));
 
         jCheckBox1.setText("DERECHO");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -111,6 +111,11 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
         jCheckBox2.setText("INGENIERIA");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
 
         jCheckBox3.setText("PSICOLOGIA");
@@ -196,6 +201,10 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
     private void jCheckBox17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox17ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox17ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     /**
      * @param args the command line arguments

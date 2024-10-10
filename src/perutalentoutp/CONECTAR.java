@@ -34,4 +34,12 @@ try
  
     
 }
+
+public static void main(String[] args) {
+        
+        Connection con = conectarbase();
+    }
+
+
+
 }
