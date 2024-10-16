@@ -13,9 +13,9 @@ import java.sql.*;
  */
 public class CONECTAR {
     
-static String url= "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10735060";
-static String user= "sql10735060";
-static String pass= "7aYJyJh5zI";
+static String url= "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10737596";
+static String user= "sql10737596";
+static String pass= "k9X6yGMMlt";
     
 
 public static Connection conectarbase(){

@@ -21,9 +21,9 @@ public class BuscarPersonaGUI extends JFrame {
     private JTextArea resultadoArea;
 
     // Conexion a la base de datos server con mysql
-    private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10735060";
-    private static final String DB_USER = "sql10735060";
-    private static final String DB_PASSWORD = "7aYJyJh5zI";
+    private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10737596";
+    private static final String DB_USER = "sql10737596";
+    private static final String DB_PASSWORD = "k9X6yGMMlt";
 
     public BuscarPersonaGUI() {
         // ajustamos ventanita de programa
@@ -82,7 +82,7 @@ public class BuscarPersonaGUI extends JFrame {
         });
     }
 
-    public void buscarPersonaEnBaseDatos(String nombre) {
+    public void buscarPersonaEnBaseDatos(String NOMBRES) {
         Connection conexion = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -92,9 +92,9 @@ public class BuscarPersonaGUI extends JFrame {
             conexion = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
             // Crear la consulta SQL con LIKE para coincidencia parcial esto lo uso Jhordy y le agragamos mas datos de resultado
-            String consulta = "SELECT nombre, universidad, direccion, telefono , Ultimotrabajo  FROM DB_POSTULANTESVF3F WHERE nombre LIKE ?";
+            String consulta = "SELECT NOMBRES, CARRERAS, DIRECCION, TELEFONO , ULTIMOTRABAJO  FROM sql10737596.postulantes WHERE NOMBRES LIKE ?";
             ps = conexion.prepareStatement(consulta);
-            ps.setString(1, "%" + nombre + "%"); // Buscar coincidencias parciales que tengan similitud en todo el nombre 
+            ps.setString(1, "%" + NOMBRES + "%"); // Buscar coincidencias parciales que tengan similitud en todo el nombre 
 
             // Ejecutar la consulta dentro de la BD
             rs = ps.executeQuery();
@@ -105,20 +105,20 @@ public class BuscarPersonaGUI extends JFrame {
             // Procesar los resultados con los pedidos que tenemos
             int contador = 1;  // Para numerar las personas encontradas
             while (rs.next()) {
-                String nombreResultado = rs.getString("nombre");
-                String universidad = rs.getString("universidad");
-                String direccion = rs.getString("direccion");
-                String telefono = rs.getString("telefono");
-                String Ultimotrabajo = rs.getString("Ultimotrabajo");
+                String nombreResultado = rs.getString("NOMBRES");
+                String CARRERAS = rs.getString("CARRERAS");
+                String DIRECCION = rs.getString("DIRECCION");
+                String TELEFONO = rs.getString("TELEFONO");
+                String ULTIMOTRABAJO = rs.getString("ULTIMOTRABAJO");
                
 
                 // Agregar cada linea a los resultado de la busqueda que le hicimos
                 resultadoArea.append(contador + ".\n");
-                resultadoArea.append("Nombre de Postulante: " + nombreResultado + "\n");
-                resultadoArea.append("Carrera Profesional: " + universidad + "\n");
-                resultadoArea.append("Dirección: " + direccion + "\n");
-                resultadoArea.append("Telefono de Contacto: " + telefono + "\n");
-                resultadoArea.append("Ultimo Lugar de Trabajo: " + Ultimotrabajo + "\n\n");
+                resultadoArea.append("Nombre de Postulante: " + NOMBRES + "\n");
+                resultadoArea.append("Carrera Profesional: " + CARRERAS + "\n");
+                resultadoArea.append("Dirección: " + DIRECCION + "\n");
+                resultadoArea.append("Telefono de Contacto: " + TELEFONO + "\n");
+                resultadoArea.append("Ultimo Lugar de Trabajo: " + ULTIMOTRABAJO + "\n\n");
 
                 contador++; // Incrementamos el contador 
             }
