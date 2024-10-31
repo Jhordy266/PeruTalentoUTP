@@ -192,7 +192,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
 
-        Contacto newframe = new Contacto();
+        Conocenos newframe = new Conocenos();
 
         newframe.setVisible(true);
 
