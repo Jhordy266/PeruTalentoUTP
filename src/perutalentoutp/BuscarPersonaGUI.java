@@ -21,9 +21,9 @@ public class BuscarPersonaGUI extends JFrame {
     private JTextArea resultadoArea;
 
     // Conexion a la base de datos server con mysql
-    private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10737596";
-    private static final String DB_USER = "sql10737596";
-    private static final String DB_PASSWORD = "k9X6yGMMlt";
+    private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10742223";
+    private static final String DB_USER = "sql10742223";
+    private static final String DB_PASSWORD = "6SlGmkPLxr";
 
     public BuscarPersonaGUI() {
         // ajustamos ventanita de programa
@@ -92,7 +92,7 @@ public class BuscarPersonaGUI extends JFrame {
             conexion = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
             // Crear la consulta SQL con LIKE para coincidencia parcial esto lo uso Jhordy y le agragamos mas datos de resultado
-            String consulta = "SELECT NOMBRES, CARRERAS, DIRECCION, TELEFONO , ULTIMOTRABAJO  FROM sql10737596.postulantes WHERE NOMBRES LIKE ?";
+            String consulta = "SELECT NOMBRES, CARRERAS, DIRECCION, TELEFONO   FROM sql10742223.postulantes WHERE NOMBRES LIKE ?";
             ps = conexion.prepareStatement(consulta);
             ps.setString(1, "%" + NOMBRES + "%"); // Buscar coincidencias parciales que tengan similitud en todo el nombre 
 
@@ -109,7 +109,7 @@ public class BuscarPersonaGUI extends JFrame {
                 String CARRERAS = rs.getString("CARRERAS");
                 String DIRECCION = rs.getString("DIRECCION");
                 String TELEFONO = rs.getString("TELEFONO");
-                String ULTIMOTRABAJO = rs.getString("ULTIMOTRABAJO");
+               
                
 
                 // Agregar cada linea a los resultado de la busqueda que le hicimos
@@ -118,7 +118,7 @@ public class BuscarPersonaGUI extends JFrame {
                 resultadoArea.append("Carrera Profesional: " + CARRERAS + "\n");
                 resultadoArea.append("Dirección: " + DIRECCION + "\n");
                 resultadoArea.append("Telefono de Contacto: " + TELEFONO + "\n");
-                resultadoArea.append("Ultimo Lugar de Trabajo: " + ULTIMOTRABAJO + "\n\n");
+              
 
                 contador++; // Incrementamos el contador 
             }
