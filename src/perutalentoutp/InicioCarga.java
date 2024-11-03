@@ -146,7 +146,7 @@ public class InicioCarga extends javax.swing.JFrame {
         // Cierra el formulario actual
         this.dispose();
         // Crea y muestra el siguiente formulario
-        Login login = new Login(); // Reemplaza con tu clase de formulario
+        Login2 login = new Login2(); // Reemplaza con tu clase de formulario
         login.setVisible(true);
         // FIN
     }

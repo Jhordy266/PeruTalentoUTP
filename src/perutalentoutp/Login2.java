@@ -50,6 +50,7 @@ public class Login2 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(33, 44, 62));
@@ -125,7 +126,7 @@ public class Login2 extends javax.swing.JFrame {
                 BtnSalirActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 380, 110, -1));
+        jPanel1.add(BtnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 110, 40));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 170, 230, 10));
 
         TxtContraseña.setBackground(new java.awt.Color(33, 44, 62));
@@ -197,6 +198,17 @@ public class Login2 extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 450));
 
+        jButton1.setBackground(new java.awt.Color(65, 170, 174));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CambiarContraseña.png"))); // NOI18N
+        jButton1.setText("CAMBIAR CONTRASEÑA");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 190, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -224,7 +236,7 @@ public class Login2 extends javax.swing.JFrame {
         this.dispose();
         /*CIERRA EL PROGRAMA POR COMPLETO*/
     }//GEN-LAST:event_BtnSalirMouseClicked
-    
+
     private void TxtContraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtContraseñaMousePressed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtContraseñaMousePressed
@@ -235,7 +247,7 @@ public class Login2 extends javax.swing.JFrame {
 
     private void BtnIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnIngresarMouseClicked
         // TODO add your handling code here:  fffffffffff
-          validarIngreso();
+        validarIngreso();
     }//GEN-LAST:event_BtnIngresarMouseClicked
 
     private void TxtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtUsuarioActionPerformed
@@ -244,31 +256,31 @@ public class Login2 extends javax.swing.JFrame {
 
     private void TxtUsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtUsuarioMousePressed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_TxtUsuarioMousePressed
 
     private void TxtUsuarioKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtUsuarioKeyPressed
         // TODO add your handling code here:
-        
-// Verificar si se presionó la tecla Enter
-    if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-        // Verificar si el campo de texto está vacío
-        if (TxtUsuario.getText().trim().isEmpty()) {
-            // Mostrar mensaje si el campo está vacío
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese su usuario antes de continuar.");
-            TxtUsuario.requestFocus();  // Enfocar nuevamente en el campo TxtUsuario
-        } else {
-            // Si hay texto, cambiar al siguiente campo de texto
-            TxtContraseña.requestFocus();
 
+// Verificar si se presionó la tecla Enter
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            // Verificar si el campo de texto está vacío
+            if (TxtUsuario.getText().trim().isEmpty()) {
+                // Mostrar mensaje si el campo está vacío
+                JOptionPane.showMessageDialog(this, "Por favor, ingrese su usuario antes de continuar.");
+                TxtUsuario.requestFocus();  // Enfocar nuevamente en el campo TxtUsuario
+            } else {
+                // Si hay texto, cambiar al siguiente campo de texto
+                TxtContraseña.requestFocus();
+
+            }
         }
-    }
 
     }//GEN-LAST:event_TxtUsuarioKeyPressed
 
     private void TxtContraseñaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TxtContraseñaKeyPressed
         // TODO add your handling code here:
-            
+
         // Verificar si se presionó la tecla Enter
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             // Verificar si el campo de texto está vacío
@@ -280,12 +292,12 @@ public class Login2 extends javax.swing.JFrame {
                 // Si hay texto llamar a validar ingreso
                 validarIngreso();
             }
-    }
+        }
     }//GEN-LAST:event_TxtContraseñaKeyPressed
 
     private void TxtContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtContraseñaMouseClicked
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_TxtContraseñaMouseClicked
 
     private void TxtUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtUsuarioMouseClicked
@@ -295,7 +307,7 @@ public class Login2 extends javax.swing.JFrame {
     private void TxtUsuarioFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TxtUsuarioFocusGained
         // TODO add your handling code here:
         if (TxtUsuario.getText().equals("Ingrese su nombre de usuario")) {
-              TxtUsuario.setText(""); // Borra el texto por defecto al hacer clic
+            TxtUsuario.setText(""); // Borra el texto por defecto al hacer clic
         }
     }//GEN-LAST:event_TxtUsuarioFocusGained
 
@@ -309,7 +321,7 @@ public class Login2 extends javax.swing.JFrame {
     private void TxtContraseñaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TxtContraseñaFocusGained
         // TODO add your handling code here:
         if (TxtContraseña.getText().equals("*****")) {
-              TxtContraseña.setText(""); // Borra el texto por defecto al hacer clic
+            TxtContraseña.setText(""); // Borra el texto por defecto al hacer clic
         }
     }//GEN-LAST:event_TxtContraseñaFocusGained
 
@@ -320,12 +332,20 @@ public class Login2 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_TxtContraseñaFocusLost
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+         // Ir al formulario MenuPrincipal
+                CambioContraseña nuevoFormulario = new CambioContraseña();
+                nuevoFormulario.setVisible(true);
+                  this.dispose(); 
+        
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
     private int intentos = 0; //Variable para controlar el intentos de accesos incorrectos
-    
-    
-    
+
 // METODO VALIDAR INGRESO - INICIO
-private void validarIngreso() {
+    private void validarIngreso() {
         String usuario = TxtUsuario.getText();
         String contrasena = new String(TxtContraseña.getPassword());
 
@@ -340,55 +360,54 @@ private void validarIngreso() {
         }
 
         // Conectarse a la base de datos y verificar credenciales
-try {
-    // Parámetros de conexión
-    String url = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10742054";
-    String dbUser = "sql10742054";
-    String dbPassword = "c2HfX6vUVE";
+        try {
+            // Parámetros de conexión
+            String url = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10742054";
+            String dbUser = "sql10742054";
+            String dbPassword = "c2HfX6vUVE";
 
-    // Conexión a la base de datos
-    Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
-    //JOptionPane.showMessageDialog(this, "Conexión a la base de datos exitosa."); // Mensaje si la conexión es exitosa
+            // Conexión a la base de datos
+            Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
+            //JOptionPane.showMessageDialog(this, "Conexión a la base de datos exitosa."); // Mensaje si la conexión es exitosa
 
-    // Consulta SQL para verificar las credenciales
-    String query = "SELECT * FROM sql10742054.usuarios WHERE NombreUsuario = ? AND contrasena = ?";
-    PreparedStatement statement = connection.prepareStatement(query);
-    statement.setString(1, usuario);
-    statement.setString(2, contrasena);
+            // Consulta SQL para verificar las credenciales
+            String query = "SELECT * FROM sql10742054.usuarios WHERE NombreUsuario = ? AND contrasena = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, usuario);
+            statement.setString(2, contrasena);
 
-    ResultSet resultSet = statement.executeQuery();
+            ResultSet resultSet = statement.executeQuery();
 
-    if (resultSet.next()) {
-        JOptionPane.showMessageDialog(this, "¡Acceso correcto!");
-        intentos = 0; // Reinicia el contador de intentos
+            if (resultSet.next()) {
+                JOptionPane.showMessageDialog(this, "¡Acceso correcto!");
+                intentos = 0; // Reinicia el contador de intentos
 
-        // Ir al formulario MenuPrincipal
-        MenuPrincipal nuevoFormulario = new MenuPrincipal();
-        nuevoFormulario.setVisible(true);
-        this.dispose(); // Cierra la ventana de login
-    } else {
-        intentos++;
-        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos. Intento " + intentos + " de 3.");
-        TxtUsuario.setText("Ingrese su nombre de usuario");
-        TxtContraseña.setText("*****");
+                // Ir al formulario MenuPrincipal
+                MenuPrincipal nuevoFormulario = new MenuPrincipal();
+                nuevoFormulario.setVisible(true);
+                this.dispose(); // Cierra la ventana de login
+            } else {
+                intentos++;
+                JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos. Intento " + intentos + " de 3.");
+                TxtUsuario.setText("Ingrese su nombre de usuario");
+                TxtContraseña.setText("*****");
 
-        if (intentos >= 3) {
-            JOptionPane.showMessageDialog(this, "Demasiados intentos fallidos. El sistema se cerrará.");
-            System.exit(0); // Cierra la aplicación tras 3 intentos fallidos
+                if (intentos >= 3) {
+                    JOptionPane.showMessageDialog(this, "Demasiados intentos fallidos. El sistema se cerrará.");
+                    System.exit(0); // Cierra la aplicación tras 3 intentos fallidos
+                }
+            }
+
+            // Cerrar la conexión y recursos
+            resultSet.close();
+            statement.close();
+            connection.close();
+
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos: " + e.getMessage());
         }
     }
-
-    // Cerrar la conexión y recursos
-    resultSet.close();
-    statement.close();
-    connection.close();
-
-} catch (SQLException e) {
-    JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos: " + e.getMessage());
-}
-    }
 // METODO VALIDAR INGRESO - FIN
-
 
     /**
      * @param args the command line arguments
@@ -433,6 +452,7 @@ try {
     private javax.swing.JLabel LblUsuario;
     private javax.swing.JPasswordField TxtContraseña;
     private javax.swing.JTextField TxtUsuario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
