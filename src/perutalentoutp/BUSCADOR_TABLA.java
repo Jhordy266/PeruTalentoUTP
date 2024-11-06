@@ -22,11 +22,13 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
      */
     public BUSCADOR_TABLA() {
         initComponents();
+         this.setLocationRelativeTo(null); // centra el Jframe
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -60,82 +62,125 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(7, 6, 6));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(33, 44, 62));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("BUSCADOR TALENTO PERÚ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 400, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 400, 30));
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("FORMACION ACADEMICA : ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, 20));
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CONOCIMIENTOS: ");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 20));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 20));
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("CARRERAS :");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("IDIOMAS: ");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, 20));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, 20));
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("EXPERIENCIA LABORAL:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("CURSOS : ");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
 
+        jbBuscar.setBackground(new java.awt.Color(65, 170, 174));
+        jbBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Buscar.png"))); // NOI18N
         jbBuscar.setText("BUSCAR TALENTO");
+        jbBuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbBuscar.setPreferredSize(new java.awt.Dimension(91, 36));
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BUSCARTALENTO(evt);
             }
         });
-        getContentPane().add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 150, 30));
+        jPanel1.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 160, -1));
 
+        jbRegresar.setBackground(new java.awt.Color(255, 51, 51));
+        jbRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
         jbRegresar.setText("REGRESAR");
+        jbRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbRegresar.setMaximumSize(new java.awt.Dimension(137, 36));
+        jbRegresar.setMinimumSize(new java.awt.Dimension(137, 36));
+        jbRegresar.setPreferredSize(new java.awt.Dimension(91, 36));
+        jbRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbRegresarMouseClicked(evt);
+            }
+        });
         jbRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbRegresarActionPerformed(evt);
             }
         });
-        getContentPane().add(jbRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 370, 130, 30));
+        jPanel1.add(jbRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 160, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/PeruTalento1.png"))); // NOI18N
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 260, 260));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/talentoPeruu-removebg.png"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 250, 300));
 
+        cbDerecho.setBackground(new java.awt.Color(33, 44, 62));
+        cbDerecho.setForeground(new java.awt.Color(255, 255, 255));
         cbDerecho.setText("DERECHO");
         cbDerecho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbDerechoActionPerformed(evt);
             }
         });
-        getContentPane().add(cbDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
+        jPanel1.add(cbDerecho, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, -1, -1));
 
+        cbIngenieria.setBackground(new java.awt.Color(33, 44, 62));
+        cbIngenieria.setForeground(new java.awt.Color(255, 255, 255));
         cbIngenieria.setText("INGENIERIA");
         cbIngenieria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbIngenieriaActionPerformed(evt);
             }
         });
-        getContentPane().add(cbIngenieria, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
+        jPanel1.add(cbIngenieria, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
 
+        cbPsicologia.setBackground(new java.awt.Color(33, 44, 62));
+        cbPsicologia.setForeground(new java.awt.Color(255, 255, 255));
         cbPsicologia.setText("PSICOLOGIA");
-        getContentPane().add(cbPsicologia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
+        jPanel1.add(cbPsicologia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, -1, -1));
 
+        cbAdministracion.setBackground(new java.awt.Color(33, 44, 62));
+        cbAdministracion.setForeground(new java.awt.Color(255, 255, 255));
         cbAdministracion.setText("ADMINISTRACION");
-        getContentPane().add(cbAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, -1, -1));
+        jPanel1.add(cbAdministracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 80, -1, -1));
 
+        cbMedicina.setBackground(new java.awt.Color(33, 44, 62));
+        cbMedicina.setForeground(new java.awt.Color(255, 255, 255));
         cbMedicina.setText("MEDICINA");
-        getContentPane().add(cbMedicina, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
+        jPanel1.add(cbMedicina, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
 
+        cbEducacion.setBackground(new java.awt.Color(33, 44, 62));
+        cbEducacion.setForeground(new java.awt.Color(255, 255, 255));
         cbEducacion.setText("EDUCACIÓN");
-        getContentPane().add(cbEducacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
+        jPanel1.add(cbEducacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, -1, -1));
 
+        cbEconomia.setBackground(new java.awt.Color(33, 44, 62));
+        cbEconomia.setForeground(new java.awt.Color(255, 255, 255));
         cbEconomia.setText("ECONOMIA");
-        getContentPane().add(cbEconomia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
+        jPanel1.add(cbEconomia, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, -1, -1));
 
+        cbContabilidad.setBackground(new java.awt.Color(33, 44, 62));
+        cbContabilidad.setForeground(new java.awt.Color(255, 255, 255));
         cbContabilidad.setText("CONTABILIDAD");
-        getContentPane().add(cbContabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, -1, -1));
+        jPanel1.add(cbContabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, -1, -1));
 
         cbFormacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TITULO UNIVERSITARIO", "BACHILLER", "TITULO TECNICO", "EGRESADO TECNICO", "ESTUDIANTE UNIVERSITARIO", " " }));
         cbFormacion.addActionListener(new java.awt.event.ActionListener() {
@@ -143,47 +188,67 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
                 cbFormacionActionPerformed(evt);
             }
         });
-        getContentPane().add(cbFormacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
+        jPanel1.add(cbFormacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, -1));
 
+        cbmba.setBackground(new java.awt.Color(33, 44, 62));
+        cbmba.setForeground(new java.awt.Color(255, 255, 255));
         cbmba.setText("MBA");
-        getContentPane().add(cbmba, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, -1, -1));
+        jPanel1.add(cbmba, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, -1, -1));
 
+        cbMagister.setBackground(new java.awt.Color(33, 44, 62));
+        cbMagister.setForeground(new java.awt.Color(255, 255, 255));
         cbMagister.setText("MAGISTER");
         cbMagister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbMagisterActionPerformed(evt);
             }
         });
-        getContentPane().add(cbMagister, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
+        jPanel1.add(cbMagister, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, -1, -1));
 
+        cbDiplomado.setBackground(new java.awt.Color(33, 44, 62));
+        cbDiplomado.setForeground(new java.awt.Color(255, 255, 255));
         cbDiplomado.setText("DIPLOMADO");
-        getContentPane().add(cbDiplomado, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
+        jPanel1.add(cbDiplomado, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
 
         cbExperiencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 Año", "2 Años", "3 Años", "4 Años", "5 Años", "6 Años", "7 Años", "8 Años", "9 Años", "10 Años", " " }));
-        getContentPane().add(cbExperiencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, -1, -1));
+        jPanel1.add(cbExperiencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, -1, -1));
 
+        cbOfimatica.setBackground(new java.awt.Color(33, 44, 62));
+        cbOfimatica.setForeground(new java.awt.Color(255, 255, 255));
         cbOfimatica.setText("OFIMATICA");
-        getContentPane().add(cbOfimatica, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, -1));
+        jPanel1.add(cbOfimatica, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, -1, -1));
 
+        cbComputacion.setBackground(new java.awt.Color(33, 44, 62));
+        cbComputacion.setForeground(new java.awt.Color(255, 255, 255));
         cbComputacion.setText("COMPUTACION");
-        getContentPane().add(cbComputacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+        jPanel1.add(cbComputacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
+        cbIngles.setBackground(new java.awt.Color(33, 44, 62));
+        cbIngles.setForeground(new java.awt.Color(255, 255, 255));
         cbIngles.setText("INGLES");
-        getContentPane().add(cbIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
+        jPanel1.add(cbIngles, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
 
+        cbChino.setBackground(new java.awt.Color(33, 44, 62));
+        cbChino.setForeground(new java.awt.Color(255, 255, 255));
         cbChino.setText("CHINO");
-        getContentPane().add(cbChino, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
+        jPanel1.add(cbChino, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
 
+        cbFrances.setBackground(new java.awt.Color(33, 44, 62));
+        cbFrances.setForeground(new java.awt.Color(255, 255, 255));
         cbFrances.setText("FRANCES");
-        getContentPane().add(cbFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
+        jPanel1.add(cbFrances, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
 
+        cbPortugues.setBackground(new java.awt.Color(33, 44, 62));
+        cbPortugues.setForeground(new java.awt.Color(255, 255, 255));
         cbPortugues.setText("PORTUGUES");
         cbPortugues.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbPortuguesActionPerformed(evt);
             }
         });
-        getContentPane().add(cbPortugues, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
+        jPanel1.add(cbPortugues, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -272,6 +337,25 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbFormacionActionPerformed
 
+    private void jbRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRegresarMouseClicked
+        // TODO add your handling code here:
+        
+         // INICIO
+        
+        // Crea y muestra el siguiente formulario
+        MenuPrincipal regresar = new MenuPrincipal(); // Reemplaza con tu clase de formulario
+        regresar.setVisible(true);
+        
+        // Cierra el formulario actual
+        this.dispose();
+        
+        // FIN
+        
+        
+        
+        
+    }//GEN-LAST:event_jbRegresarMouseClicked
+
        public  void main(String args[]) {
                
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -309,6 +393,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbBuscar;
     private javax.swing.JButton jbRegresar;
     // End of variables declaration//GEN-END:variables
