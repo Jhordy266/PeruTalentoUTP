@@ -1,5 +1,5 @@
 package perutalentoutp;
-
+//importamos lo que se usara en el formulario de salida
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
@@ -11,29 +11,29 @@ import java.util.ArrayList;
 
 public class ResultadoFormulario extends javax.swing.JFrame {
 
-    
-  private JTable table;
+// Declaramos Jtable para usarlo en la salida de datos de nuestra busqueda    
+private JTable table;
 
     public ResultadoFormulario(ArrayList<String[]> resultados) {
-        initComponents();
+        //configuramos el titulo y forma de la tabla
         setTitle("Resultados de la Búsqueda");
         setSize(600, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        // Configurar la tabla
+        // Configuramos la tabla para indicar que se mostrara
         String[] columnNames = {"Nombre", "Carrera", "Formación", "Curso", "Experiencia", "Conocimiento", "Idioma"};
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
         table = new JTable(model);
                
-          // Agregar datos a la tabla
+          // Agregar datos a la tabla de la BD
         for (String[] row : resultados) {
             model.addRow(row);
         }
 
-        // Agregar la tabla al formulario
+        // Agregar la tabla al formulario de salida
         add(new JScrollPane(table));
-        
+        setVisible(true);
         
     }
     
@@ -62,14 +62,9 @@ public class ResultadoFormulario extends javax.swing.JFrame {
 
     // Método main
      public static void main(String args[]) {
-         
-       // ArrayList<String[]> resultados = new ArrayList<>();
-        //resultados.add(new String[]{"Juan Pérez", "Ingeniería", "Licenciatura", "Java", "5 años", "SQL", "Inglés"});
-       // resultados.add(new String[]{"Ana Gómez", "Medicina", "Máster", "Biología", "3 años", "Ninguno", "Francés"});
-
-                  
-        ArrayList<String[]> resultados = new ArrayList<>();
-                   
+       //usamos los arreglos de array para que imprima y guarde la busqueda  
+       ArrayList<String[]> resultados = new ArrayList<>();
+                        
          java.awt.EventQueue.invokeLater(() -> {
             new ResultadoFormulario(resultados).setVisible(true);
          });

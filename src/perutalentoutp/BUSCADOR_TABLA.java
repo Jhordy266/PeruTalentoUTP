@@ -1,5 +1,5 @@
 package perutalentoutp;
-
+//importamos lo que se usara en el formulario de busqueda
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,14 +12,12 @@ import java.util.ArrayList;
 
 public class BUSCADOR_TABLA extends javax.swing.JFrame {
 
-  // Conexion a la base de datos server con mysql
+  // Conexion a la base de datos server con mysql y nuestra base de datos
     private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10742223";
     private static final String DB_USER = "sql10742223";
     private static final String DB_PASSWORD = "6SlGmkPLxr";   
     
-    /**
-     * Creates new form BUSCADOR_TABLA
-     */
+   
     public BUSCADOR_TABLA() {
         initComponents();
          this.setLocationRelativeTo(null); // centra el Jframe
@@ -255,9 +253,9 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
 
     private void BUSCARTALENTO(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BUSCARTALENTO
     
-// Crear una lista para almacenar los criterios seleccionados
+// indicamos las consultas que hara nuestro programa en nuestra BD
      StringBuilder query = new StringBuilder("SELECT * FROM postulantes WHERE 1=1");
-
+//tomamos desiciones de acuerdo a las consultas de los items que tenemos como discriminante
     if (cbDerecho.isSelected()) query.append(" AND CARRERAS LIKE '%DERECHO%'");
     if (cbIngenieria.isSelected()) query.append(" AND CARRERAS LIKE '%INGENIERIA%'");
     if (cbPsicologia.isSelected()) query.append(" AND CARRERAS LIKE '%PSICOLOGIA%'");
@@ -284,7 +282,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
     if (cbChino.isSelected()) query.append(" AND IDIOMAS LIKE '%CHINO%'");
     if (cbFrances.isSelected()) query.append(" AND IDIOMAS LIKE '%FRANCES%'");
     if (cbPortugues.isSelected()) query.append(" AND IDIOMAS LIKE '%PORTUGUES%'");
-
+//usamos try para identificar a los que cumplen con la condicion y pedimos que nos brinde los datos que queremos de la BD y los guarde en arreglos
     try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
          PreparedStatement pstmt = conn.prepareStatement(query.toString());
          ResultSet rs = pstmt.executeQuery()) {
@@ -302,10 +300,10 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
             };
             results.add(row);
         }
-
+//mandamos a nuuestra ventana de salida
         ResultadoFormulario resultadoForm = new ResultadoFormulario(results);
         resultadoForm.setVisible(true);
-        
+//si es que ocurre una desconexion con la BD alertamos con mensaje        
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(this, "Error en la consulta: " + e.getMessage());
     }
@@ -355,7 +353,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jbRegresarMouseClicked
-
+//damos la accion al boton de regresar
        public  void main(String args[]) {
                
         java.awt.EventQueue.invokeLater(new Runnable() {
