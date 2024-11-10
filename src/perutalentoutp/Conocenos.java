@@ -59,15 +59,15 @@ public class Conocenos extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/x_2.png"))); // NOI18N
-        jButton3.setText("X");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/return_icon_177921.png"))); // NOI18N
+        jButton3.setText("Volver");
         jButton3.setToolTipText("");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 120, 40));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 100, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Conocenos.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -117,7 +117,7 @@ public class Conocenos extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
        /* try {
-            Desktop.getDesktop().browse(new URI("https://www.youtube.com/@Jhordy266"));
+            Desktop.getDesktop().browse(new URI("https://github.com/Jhordy266/PeruTalentoUTP"));
         } catch (Exception ex) {
             ex.printStackTrace();
         }*/
@@ -134,10 +134,20 @@ public class Conocenos extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        /* try {
+            Desktop.getDesktop().browse(new URI("https://fb.com/gbsesac"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }*/
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+         /* try {
+            Desktop.getDesktop().browse(new URI("https://www.instagram.com/cristiano/"));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }*/
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
