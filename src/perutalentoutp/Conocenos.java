@@ -4,6 +4,9 @@
  */
 package perutalentoutp;
 
+import java.awt.Desktop;
+import java.net.URI;
+
 /**
  *
  * @author Randall
@@ -106,48 +109,48 @@ public class Conocenos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-       /* try {
+      // TODO add your handling code here:
+        try {
             Desktop.getDesktop().browse(new URI("https://api.whatsapp.com/send?phone=51996841981"));
         } catch (Exception ex) {
             ex.printStackTrace();
-        }*/
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-       /* try {
+    // TODO add your handling code here:
+        try {
             Desktop.getDesktop().browse(new URI("https://github.com/Jhordy266/PeruTalentoUTP"));
         } catch (Exception ex) {
             ex.printStackTrace();
-        }*/
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-       /* try {
-            Desktop.getDesktop().browse(new URI("https://fb.com/gbsesac"));
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }*/
+        MenuPrincipal newframe = new MenuPrincipal();
+
+        newframe.setVisible(true);
+
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        /* try {
+      // TODO add your handling code here:
+        try {
             Desktop.getDesktop().browse(new URI("https://fb.com/gbsesac"));
         } catch (Exception ex) {
             ex.printStackTrace();
-        }*/
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-         /* try {
+       // TODO add your handling code here:
+        try {
             Desktop.getDesktop().browse(new URI("https://www.instagram.com/cristiano/"));
         } catch (Exception ex) {
             ex.printStackTrace();
-        }*/
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
