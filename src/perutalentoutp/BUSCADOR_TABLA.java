@@ -56,6 +56,8 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         cbChino = new javax.swing.JCheckBox();
         cbFrances = new javax.swing.JCheckBox();
         cbPortugues = new javax.swing.JCheckBox();
+        LblMinimizar = new javax.swing.JLabel();
+        LblCerrar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(7, 6, 6));
@@ -246,6 +248,22 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         });
         jPanel1.add(cbPortugues, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
 
+        LblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menos.png"))); // NOI18N
+        LblMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblMinimizarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 20, 20));
+
+        LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancelar (1).png"))); // NOI18N
+        LblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LblCerrarMouseClicked(evt);
+            }
+        });
+        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 20, 20));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 430));
 
         pack();
@@ -353,6 +371,28 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jbRegresarMouseClicked
+
+    private void LblMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMinimizarMouseClicked
+        // TODO add your handling code here:
+
+        this.setExtendedState(ICONIFIED); // PARA MINIMIZAR EL PROGRAMA
+    }//GEN-LAST:event_LblMinimizarMouseClicked
+
+    private void LblCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCerrarMouseClicked
+  //cogido para preguntar si se desea salir o no del programa 
+        int respuesta = JOptionPane.showConfirmDialog(
+                    BUSCADOR_TABLA.this, 
+                    "¿Deseas realmente salir?", 
+                    "Confirmación", 
+                    JOptionPane.YES_NO_OPTION
+                );
+
+                if (respuesta == JOptionPane.YES_OPTION) {
+                    dispose(); // Cierra la ventana y libera los recursos
+                    System.exit(0); // Termina la aplicación
+                }
+         
+    }//GEN-LAST:event_LblCerrarMouseClicked
 //damos la accion al boton de regresar
        public  void main(String args[]) {
                
@@ -364,6 +404,8 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LblCerrar;
+    private javax.swing.JLabel LblMinimizar;
     private javax.swing.JCheckBox cbAdministracion;
     private javax.swing.JCheckBox cbChino;
     private javax.swing.JCheckBox cbComputacion;
