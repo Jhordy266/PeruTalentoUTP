@@ -205,7 +205,7 @@ public class Login2 extends javax.swing.JFrame {
                 LblMinimizarMouseClicked(evt);
             }
         });
-        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 20, 20));
+        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, 20));
 
         LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancelar (1).png"))); // NOI18N
         LblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -213,7 +213,7 @@ public class Login2 extends javax.swing.JFrame {
                 LblCerrarMouseClicked(evt);
             }
         });
-        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, 20, 20));
+        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
