@@ -18,6 +18,7 @@ public class Conocenos extends javax.swing.JFrame {
      */
     public Conocenos() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -30,69 +31,200 @@ public class Conocenos extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        BtnWhatsapp = new javax.swing.JButton();
+        BtnGithub = new javax.swing.JButton();
+        BtnVolver = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        BtnFacebook = new javax.swing.JButton();
+        BtnInstagram = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        lblmision2 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        lblmision3 = new javax.swing.JLabel();
+        lblmision4 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(680, 450));
 
+        jPanel1.setBackground(new java.awt.Color(33, 44, 62));
         jPanel1.setMinimumSize(new java.awt.Dimension(680, 450));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconfinder-social-media-applications-23whatsapp-4102606_113811.png"))); // NOI18N
-        jButton1.setText("WhatApp");
-        jButton1.setActionCommand(" WhatApp");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnWhatsapp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconfinder-social-media-applications-23whatsapp-4102606_113811.png"))); // NOI18N
+        BtnWhatsapp.setText("WhatApp");
+        BtnWhatsapp.setActionCommand(" WhatApp");
+        BtnWhatsapp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnWhatsappActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
+        jPanel1.add(BtnWhatsapp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/github_original_wordmark_logo_icon_146506.png"))); // NOI18N
-        jButton2.setText("Github");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        BtnGithub.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/github_original_wordmark_logo_icon_146506.png"))); // NOI18N
+        BtnGithub.setText("Github");
+        BtnGithub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BtnGithubActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, -1));
+        jPanel1.add(BtnGithub, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 120, -1));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/return_icon_177921.png"))); // NOI18N
-        jButton3.setText("Volver");
-        jButton3.setToolTipText("");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        BtnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/return_icon_177921.png"))); // NOI18N
+        BtnVolver.setText("Volver");
+        BtnVolver.setToolTipText("");
+        BtnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                BtnVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 100, 40));
+        jPanel1.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 380, 100, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Conocenos.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LosEmprendores.jpeg"))); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 360));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Facebook_icon-icons.com_66805.png"))); // NOI18N
-        jButton4.setText("Facebook");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        BtnFacebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Facebook_icon-icons.com_66805.png"))); // NOI18N
+        BtnFacebook.setText("Facebook");
+        BtnFacebook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                BtnFacebookActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 380, -1, -1));
+        jPanel1.add(BtnFacebook, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, -1, -1));
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconfinder-social-media-applications-3instagram-4102579_113804.png"))); // NOI18N
-        jButton5.setText("Instagram");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        BtnInstagram.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconfinder-social-media-applications-3instagram-4102579_113804.png"))); // NOI18N
+        BtnInstagram.setText("Instagram");
+        BtnInstagram.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                BtnInstagramActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
+        jPanel1.add(BtnInstagram, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(65, 170, 174));
+        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("eficiente y de calidad.");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 280, 20));
+
+        jLabel4.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("mejores talentos del mercado.");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 280, 20));
+
+        jLabel5.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("través de una plataforma innovadora que analiza");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 280, 20));
+
+        jLabel6.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("habilidades, experiencia y criterios específicos para");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 280, 20));
+
+        jLabel7.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("facilitar la elección rápida y precisa del mejor");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 280, 20));
+
+        jLabel8.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("candidato, contribuyendo a una contratación");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 280, 20));
+
+        lblmision2.setBackground(new java.awt.Color(33, 44, 62));
+        lblmision2.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 18)); // NOI18N
+        lblmision2.setForeground(new java.awt.Color(0, 0, 0));
+        lblmision2.setText("Misión:");
+        jPanel2.add(lblmision2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, 20));
+
+        jLabel9.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Optimizar el proceso de selección de personal a");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 280, 20));
+
+        jLabel10.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Randall PG");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 60, 20));
+
+        jLabel11.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel11.setText("Perú, reconocida por su precisión, agilidad y");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 280, 20));
+
+        jLabel12.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("efectividad, ofreciendo soluciones tecnológicas");
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 280, 20));
+
+        jLabel13.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel13.setText("avanzadas que conectan a las empresas con los");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 280, 20));
+
+        lblmision3.setBackground(new java.awt.Color(33, 44, 62));
+        lblmision3.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 18)); // NOI18N
+        lblmision3.setForeground(new java.awt.Color(0, 0, 0));
+        lblmision3.setText("Visión:");
+        jPanel2.add(lblmision3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 80, 20));
+
+        lblmision4.setBackground(new java.awt.Color(33, 44, 62));
+        lblmision4.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 18)); // NOI18N
+        lblmision4.setForeground(new java.awt.Color(0, 0, 0));
+        lblmision4.setText("Desarrolladores:");
+        jPanel2.add(lblmision4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 210, 20));
+
+        jLabel14.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setText("Ser la plataforma líder en selección de personal en");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 280, 20));
+
+        jLabel15.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setText("Deybi QM");
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 60, 20));
+
+        jLabel16.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Franco RM");
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 60, 20));
+
+        jLabel17.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel17.setText("Ever OC");
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 60, 20));
+
+        jLabel18.setBackground(new java.awt.Color(33, 44, 62));
+        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel18.setText("Jhordy GP");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 60, 20));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 300, 360));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel2.setText("PeruTalento © 2024 Reservados todos los derechos");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,50 +240,50 @@ public class Conocenos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnWhatsappActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnWhatsappActionPerformed
       // TODO add your handling code here:
         try {
-            Desktop.getDesktop().browse(new URI("https://api.whatsapp.com/send?phone=51996841981"));
+            Desktop.getDesktop().browse(new URI("https://api.whatsapp.com/send?phone=51946195033"));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnWhatsappActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void BtnGithubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGithubActionPerformed
     // TODO add your handling code here:
         try {
             Desktop.getDesktop().browse(new URI("https://github.com/Jhordy266/PeruTalentoUTP"));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BtnGithubActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BtnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVolverActionPerformed
         // TODO add your handling code here:
         MenuPrincipal newframe = new MenuPrincipal();
 
         newframe.setVisible(true);
 
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BtnVolverActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BtnFacebookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFacebookActionPerformed
       // TODO add your handling code here:
         try {
             Desktop.getDesktop().browse(new URI("https://fb.com/gbsesac"));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_BtnFacebookActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void BtnInstagramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInstagramActionPerformed
        // TODO add your handling code here:
         try {
             Desktop.getDesktop().browse(new URI("https://www.instagram.com/cristiano/"));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_BtnInstagramActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,12 +321,33 @@ public class Conocenos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton BtnFacebook;
+    private javax.swing.JButton BtnGithub;
+    private javax.swing.JButton BtnInstagram;
+    private javax.swing.JButton BtnVolver;
+    private javax.swing.JButton BtnWhatsapp;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblmision2;
+    private javax.swing.JLabel lblmision3;
+    private javax.swing.JLabel lblmision4;
     // End of variables declaration//GEN-END:variables
 }
