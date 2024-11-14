@@ -133,7 +133,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="32" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" max="32767" attributes="0"/>
                           <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -197,7 +197,7 @@
             <Component class="javax.swing.JLabel" name="LblCerrar1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/cancelar (1).png"/>
+                  <Image iconType="3" name="/imagenes/CerrarEV.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -207,7 +207,7 @@
             <Component class="javax.swing.JLabel" name="LblMinimizar">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/imagenes/menos.png"/>
+                  <Image iconType="3" name="/imagenes/MinimizarEV.png"/>
                 </Property>
               </Properties>
               <Events>

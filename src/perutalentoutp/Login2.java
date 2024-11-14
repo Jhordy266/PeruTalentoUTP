@@ -94,7 +94,7 @@ public class Login2 extends javax.swing.JFrame {
                 TxtUsuarioKeyPressed(evt);
             }
         });
-        jPanel1.add(TxtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 227, 27));
+        jPanel1.add(TxtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 227, 27));
 
         BtnIngresar.setBackground(new java.awt.Color(65, 170, 174));
         BtnIngresar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -111,8 +111,8 @@ public class Login2 extends javax.swing.JFrame {
                 BtnIngresarActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(429, 310, 190, 40));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 230, 10));
+        jPanel1.add(BtnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 190, 40));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 230, 10));
 
         TxtContraseña.setBackground(new java.awt.Color(33, 44, 62));
         TxtContraseña.setForeground(new java.awt.Color(204, 204, 255));
@@ -139,29 +139,29 @@ public class Login2 extends javax.swing.JFrame {
                 TxtContraseñaKeyPressed(evt);
             }
         });
-        jPanel1.add(TxtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 227, 27));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 230, 10));
+        jPanel1.add(TxtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, 227, 20));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 230, 10));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/usuario.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 40, 40));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/UsuarioEV.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 40, 40));
 
         LblContraseña.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblContraseña.setForeground(new java.awt.Color(255, 255, 255));
         LblContraseña.setText("CONTRASEÑA");
-        jPanel1.add(LblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 150, 33));
+        jPanel1.add(LblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 200, 150, 33));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/contraseña.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, -1, -1));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ContraseñaEV.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 40, 40));
 
         LblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         LblUsuario.setText("USUARIO");
-        jPanel1.add(LblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 184, 33));
+        jPanel1.add(LblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, 184, 30));
 
         jLabel2.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("INICIAR SESION");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 229, 53));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 229, 50));
 
         jPanel2.setBackground(new java.awt.Color(65, 170, 174));
 
@@ -197,31 +197,29 @@ public class Login2 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 190, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, 190, 40));
 
-        LblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menos.png"))); // NOI18N
+        LblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/MinimizarEV.png"))); // NOI18N
         LblMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LblMinimizarMouseClicked(evt);
             }
         });
-        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, -1, 20));
+        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, -1, 20));
 
-        LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancelar (1).png"))); // NOI18N
+        LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CerrarEV.png"))); // NOI18N
         LblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LblCerrarMouseClicked(evt);
             }
         });
-        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, 20));
+        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 676, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 676, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
