@@ -17,12 +17,12 @@ private JTable table;
     public ResultadoFormulario(ArrayList<String[]> resultados) {
         //configuramos el titulo y forma de la tabla
         setTitle("Resultados de la Búsqueda");
-        setSize(600, 400);
+        setSize(1100, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         // Configuramos la tabla para indicar que se mostrara
-        String[] columnNames = {"Nombre", "Carrera", "Formación", "Curso", "Experiencia", "Conocimiento", "Idioma"};
+        String[] columnNames = {"Nombres","Apellido Paterno","Apellido Materno","Edad", "Carrera", "Formación", "Curso", "Conocimiento", "Experiencia", "Idioma", "WhatsApp", "Telefono", "Perfil Linkedln"};
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
         table = new JTable(model);
                

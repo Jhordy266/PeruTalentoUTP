@@ -13,9 +13,9 @@ import java.util.ArrayList;
 public class BUSCADOR_TABLA extends javax.swing.JFrame {
 
   // Conexion a la base de datos server con mysql y nuestra base de datos
-    private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10742223";
-    private static final String DB_USER = "sql10742223";
-    private static final String DB_PASSWORD = "6SlGmkPLxr";   
+    private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10744238";
+    private static final String DB_USER = "sql10744238";
+    private static final String DB_PASSWORD = "crzz2s12Qz";   
     
    
     public BUSCADOR_TABLA() {
@@ -309,12 +309,18 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         while (rs.next()) {
             String[] row = {
                 rs.getString("NOMBRES"),
+                rs.getString("APELLIDO_PATERNO"),
+                rs.getString("APELLIDO_MATERNO"),
+                rs.getString("EDAD"),
                 rs.getString("CARRERAS"),
                 rs.getString("FORMACION"),
                 rs.getString("CURSOS"),
-                rs.getString("EXPERIENCIA"),
                 rs.getString("CONOCIMIENTOS"),
-                rs.getString("IDIOMAS")
+                rs.getString("EXPERIENCIA"),
+                rs.getString("IDIOMAS"),
+                rs.getString("WSP"),
+                rs.getString("TELEFONO"),
+                rs.getString("LinkedIn"),
             };
             results.add(row);
         }
@@ -323,7 +329,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         resultadoForm.setVisible(true);
 //si es que ocurre una desconexion con la BD alertamos con mensaje        
     } catch (SQLException e) {
-        JOptionPane.showMessageDialog(this, "Error en la consulta: " + e.getMessage());
+        JOptionPane.showMessageDialog(this, "BASE DE DATOS SIN CONEXIÓN: " + e.getMessage());
     }
         
         
