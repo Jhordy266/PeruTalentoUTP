@@ -300,7 +300,7 @@ public class Conocenos extends javax.swing.JFrame {
     private void BtnInstagramActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInstagramActionPerformed
         // TODO add your handling code here:
         try {
-            Desktop.getDesktop().browse(new URI("https://www.instagram.com/cristiano/"));
+            Desktop.getDesktop().browse(new URI("https://www.instagram.com/peru_talento/profilecard/?igsh=MWF4bmlvZWpzejluZg=="));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -309,7 +309,7 @@ public class Conocenos extends javax.swing.JFrame {
     private void BtnFacebookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFacebookActionPerformed
         // TODO add your handling code here:
         try {
-            Desktop.getDesktop().browse(new URI("https://fb.com/gbsesac"));
+            Desktop.getDesktop().browse(new URI("https://www.facebook.com/share/189StSfCHm/"));
         } catch (Exception ex) {
             ex.printStackTrace();
         }
