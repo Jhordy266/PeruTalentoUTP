@@ -82,23 +82,23 @@ public class CambioContraseña extends javax.swing.JFrame {
         LblUsuario.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         LblUsuario.setText("REPETIR CONTRASEÑA");
-        jPanel1.add(LblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 210, 33));
+        jPanel1.add(LblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 210, 33));
 
         LblUsuario1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblUsuario1.setForeground(new java.awt.Color(255, 255, 255));
         LblUsuario1.setText("USUARIO");
-        jPanel1.add(LblUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 90, 33));
+        jPanel1.add(LblUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 90, 33));
 
         LblUsuario2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblUsuario2.setForeground(new java.awt.Color(255, 255, 255));
         LblUsuario2.setText("CONTRASEÑA ACTUAL");
-        jPanel1.add(LblUsuario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 210, 33));
+        jPanel1.add(LblUsuario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 210, 33));
 
         LblUsuario3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         LblUsuario3.setForeground(new java.awt.Color(255, 255, 255));
         LblUsuario3.setText("NUEVA CONTRASEÑA");
-        jPanel1.add(LblUsuario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 200, 33));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 230, 10));
+        jPanel1.add(LblUsuario3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 200, 33));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 230, 10));
 
         TxtContraseña.setBackground(new java.awt.Color(33, 44, 62));
         TxtContraseña.setForeground(new java.awt.Color(204, 204, 255));
@@ -125,8 +125,8 @@ public class CambioContraseña extends javax.swing.JFrame {
                 TxtContraseñaKeyPressed(evt);
             }
         });
-        jPanel1.add(TxtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 170, 227, 27));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 230, 10));
+        jPanel1.add(TxtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 180, 227, 27));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 230, 10));
 
         TxtUsuario.setBackground(new java.awt.Color(33, 44, 62));
         TxtUsuario.setForeground(new java.awt.Color(204, 204, 255));
@@ -158,7 +158,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 TxtUsuarioKeyPressed(evt);
             }
         });
-        jPanel1.add(TxtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, 227, 27));
+        jPanel1.add(TxtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 227, 27));
 
         TxtNContraseña1.setBackground(new java.awt.Color(33, 44, 62));
         TxtNContraseña1.setForeground(new java.awt.Color(204, 204, 255));
@@ -185,8 +185,8 @@ public class CambioContraseña extends javax.swing.JFrame {
                 TxtNContraseña1KeyPressed(evt);
             }
         });
-        jPanel1.add(TxtNContraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 227, 27));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 250, 230, 10));
+        jPanel1.add(TxtNContraseña1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 227, 27));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, 230, 10));
 
         TxtNContraseña2.setBackground(new java.awt.Color(33, 44, 62));
         TxtNContraseña2.setForeground(new java.awt.Color(204, 204, 255));
@@ -213,12 +213,12 @@ public class CambioContraseña extends javax.swing.JFrame {
                 TxtNContraseña2KeyPressed(evt);
             }
         });
-        jPanel1.add(TxtNContraseña2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 227, 27));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 230, 10));
+        jPanel1.add(TxtNContraseña2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 227, 27));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 230, 10));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/sinfondo2.png"))); // NOI18N
         jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 90, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 90, 100));
 
         jPanel2.setBackground(new java.awt.Color(65, 170, 174));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -228,7 +228,7 @@ public class CambioContraseña extends javax.swing.JFrame {
         jLabel2.setText("CAMBIAR CONTRASEÑA");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 380, 53));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 70));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 680, 70));
 
         jPanel3.setBackground(new java.awt.Color(65, 170, 174));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -264,14 +264,16 @@ public class CambioContraseña extends javax.swing.JFrame {
 
         jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 0, 10, 450));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 0, 30, 450));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 30, 430));
 
-        BtnAceptar.setBackground(new java.awt.Color(255, 51, 51));
+        BtnAceptar.setBackground(new java.awt.Color(0, 108, 108));
         BtnAceptar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/VolverEV.png"))); // NOI18N
+        BtnAceptar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/RegresarEV.png"))); // NOI18N
         BtnAceptar.setText("REGRESAR");
         BtnAceptar.setToolTipText("");
-        BtnAceptar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnAceptar.setBorder(null);
+        BtnAceptar.setBorderPainted(false);
         BtnAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnAceptarMouseClicked(evt);
@@ -282,14 +284,16 @@ public class CambioContraseña extends javax.swing.JFrame {
                 BtnAceptarActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 110, 40));
+        jPanel1.add(BtnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 110, 40));
 
-        BtnAceptar1.setBackground(new java.awt.Color(65, 170, 174));
+        BtnAceptar1.setBackground(new java.awt.Color(0, 108, 108));
         BtnAceptar1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnAceptar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/aceptar.png"))); // NOI18N
+        BtnAceptar1.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAceptar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/AceptarEV.png"))); // NOI18N
         BtnAceptar1.setText("ACEPTAR");
         BtnAceptar1.setToolTipText("");
         BtnAceptar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BtnAceptar1.setBorderPainted(false);
         BtnAceptar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BtnAceptar1MouseClicked(evt);
@@ -300,7 +304,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 BtnAceptar1ActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnAceptar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 110, -1));
+        jPanel1.add(BtnAceptar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, 110, 40));
 
         ver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ver.png"))); // NOI18N
         ver.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -308,7 +312,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 verMouseClicked(evt);
             }
         });
-        jPanel1.add(ver, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, -1, -1));
+        jPanel1.add(ver, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
 
         ocultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ocultar.png"))); // NOI18N
         ocultar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -316,7 +320,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 ocultarMouseClicked(evt);
             }
         });
-        jPanel1.add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, -1, -1));
+        jPanel1.add(ocultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, -1, -1));
 
         ver1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ver.png"))); // NOI18N
         ver1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -324,7 +328,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 ver1MouseClicked(evt);
             }
         });
-        jPanel1.add(ver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, -1));
+        jPanel1.add(ver1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, -1, -1));
 
         ocultar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ocultar.png"))); // NOI18N
         ocultar1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -332,7 +336,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 ocultar1MouseClicked(evt);
             }
         });
-        jPanel1.add(ocultar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, -1));
+        jPanel1.add(ocultar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, -1, -1));
 
         ver2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ver.png"))); // NOI18N
         ver2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -340,7 +344,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 ver2MouseClicked(evt);
             }
         });
-        jPanel1.add(ver2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, -1, -1));
+        jPanel1.add(ver2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, -1, -1));
 
         ocultar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ocultar.png"))); // NOI18N
         ocultar2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -348,7 +352,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 ocultar2MouseClicked(evt);
             }
         });
-        jPanel1.add(ocultar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 280, -1, -1));
+        jPanel1.add(ocultar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 280, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -189,7 +189,9 @@ public class Conocenos extends javax.swing.JFrame {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, -1, 10));
 
         jPanel3.setBackground(new java.awt.Color(65, 170, 174));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        BtnVolver.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BtnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/VolverEV.png"))); // NOI18N
         BtnVolver.setText("Volver");
         BtnVolver.setToolTipText("");
@@ -198,34 +200,13 @@ public class Conocenos extends javax.swing.JFrame {
                 BtnVolverActionPerformed(evt);
             }
         });
+        jPanel3.add(BtnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
 
         lblmision2.setBackground(new java.awt.Color(33, 44, 62));
         lblmision2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblmision2.setForeground(new java.awt.Color(255, 255, 255));
         lblmision2.setText("CONOCENOS");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblmision2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
-                .addComponent(BtnVolver)
-                .addGap(21, 21, 21))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(lblmision2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(BtnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 8, Short.MAX_VALUE))
-        );
+        jPanel3.add(lblmision2, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 15, 262, 39));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 680, 70));
 

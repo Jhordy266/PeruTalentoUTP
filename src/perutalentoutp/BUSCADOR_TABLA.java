@@ -70,8 +70,8 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("BUSCADOR TALENTO PERÚ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 400, 30));
+        jLabel1.setText("BUSCADOR PERÚ TALENTO");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 400, 30));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("FORMACION ACADEMICA : ");
@@ -97,22 +97,28 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         jLabel11.setText("CURSOS : ");
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 20));
 
-        jbBuscar.setBackground(new java.awt.Color(65, 170, 174));
-        jbBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Buscar.png"))); // NOI18N
+        jbBuscar.setBackground(new java.awt.Color(0, 108, 108));
+        jbBuscar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jbBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        jbBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BuscarTalentoEV.png"))); // NOI18N
         jbBuscar.setText("BUSCAR TALENTO");
-        jbBuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbBuscar.setBorder(null);
+        jbBuscar.setBorderPainted(false);
         jbBuscar.setPreferredSize(new java.awt.Dimension(91, 36));
         jbBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BUSCARTALENTO(evt);
             }
         });
-        jPanel1.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 160, -1));
+        jPanel1.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 160, -1));
 
-        jbRegresar.setBackground(new java.awt.Color(255, 51, 51));
-        jbRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/VolverEV.png"))); // NOI18N
+        jbRegresar.setBackground(new java.awt.Color(0, 108, 108));
+        jbRegresar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jbRegresar.setForeground(new java.awt.Color(255, 255, 255));
+        jbRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/RegresarEV.png"))); // NOI18N
         jbRegresar.setText("REGRESAR");
-        jbRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jbRegresar.setBorder(null);
+        jbRegresar.setBorderPainted(false);
         jbRegresar.setMaximumSize(new java.awt.Dimension(137, 36));
         jbRegresar.setMinimumSize(new java.awt.Dimension(137, 36));
         jbRegresar.setPreferredSize(new java.awt.Dimension(91, 36));
@@ -126,11 +132,11 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
                 jbRegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(jbRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 160, -1));
+        jPanel1.add(jbRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 120, -1));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/talentoPeruu-removebg.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 250, 300));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 250, 300));
 
         cbDerecho.setBackground(new java.awt.Color(33, 44, 62));
         cbDerecho.setForeground(new java.awt.Color(255, 255, 255));
@@ -254,7 +260,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
                 LblMinimizarMouseClicked(evt);
             }
         });
-        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 20, 20));
+        jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 20, 20));
 
         LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CerrarEV.png"))); // NOI18N
         LblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -262,7 +268,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
                 LblCerrarMouseClicked(evt);
             }
         });
-        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 20, 20));
+        jPanel1.add(LblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 20, 20, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 430));
 
