@@ -365,13 +365,14 @@
         <Component class="javax.swing.JComboBox" name="cbFormacion">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="6">
-                <StringItem index="0" value="TITULO UNIVERSITARIO"/>
-                <StringItem index="1" value="BACHILLER"/>
-                <StringItem index="2" value="TITULO TECNICO"/>
-                <StringItem index="3" value="EGRESADO TECNICO"/>
-                <StringItem index="4" value="ESTUDIANTE UNIVERSITARIO"/>
-                <StringItem index="5" value=" "/>
+              <StringArray count="7">
+                <StringItem index="0" value="SELECCIONE"/>
+                <StringItem index="1" value="TITULO UNIVERSITARIO"/>
+                <StringItem index="2" value="BACHILLER"/>
+                <StringItem index="3" value="TITULO TECNICO"/>
+                <StringItem index="4" value="EGRESADO TECNICO"/>
+                <StringItem index="5" value="ESTUDIANTE UNIVERSITARIO"/>
+                <StringItem index="6" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -441,18 +442,19 @@
         <Component class="javax.swing.JComboBox" name="cbExperiencia">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="11">
-                <StringItem index="0" value="1 A&#xf1;o"/>
-                <StringItem index="1" value="2 A&#xf1;os"/>
-                <StringItem index="2" value="3 A&#xf1;os"/>
-                <StringItem index="3" value="4 A&#xf1;os"/>
-                <StringItem index="4" value="5 A&#xf1;os"/>
-                <StringItem index="5" value="6 A&#xf1;os"/>
-                <StringItem index="6" value="7 A&#xf1;os"/>
-                <StringItem index="7" value="8 A&#xf1;os"/>
-                <StringItem index="8" value="9 A&#xf1;os"/>
-                <StringItem index="9" value="10 A&#xf1;os"/>
-                <StringItem index="10" value=" "/>
+              <StringArray count="12">
+                <StringItem index="0" value="SELECCIONE"/>
+                <StringItem index="1" value="1 A&#xf1;o"/>
+                <StringItem index="2" value="2 A&#xf1;os"/>
+                <StringItem index="3" value="3 A&#xf1;os"/>
+                <StringItem index="4" value="4 A&#xf1;os"/>
+                <StringItem index="5" value="5 A&#xf1;os"/>
+                <StringItem index="6" value="6 A&#xf1;os"/>
+                <StringItem index="7" value="7 A&#xf1;os"/>
+                <StringItem index="8" value="8 A&#xf1;os"/>
+                <StringItem index="9" value="9 A&#xf1;os"/>
+                <StringItem index="10" value="10 A&#xf1;os"/>
+                <StringItem index="11" value=" "/>
               </StringArray>
             </Property>
           </Properties>

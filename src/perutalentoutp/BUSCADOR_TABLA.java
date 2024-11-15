@@ -16,6 +16,27 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
     private static final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10744238";
     private static final String DB_USER = "sql10744238";
     private static final String DB_PASSWORD = "crzz2s12Qz";   
+
+private boolean validarCampos() {
+    if (!cbDerecho.isSelected() && !cbIngenieria.isSelected() && !cbPsicologia.isSelected() &&
+        !cbAdministracion.isSelected() && !cbMedicina.isSelected() && !cbEducacion.isSelected() &&
+        !cbEconomia.isSelected() && !cbContabilidad.isSelected()) {
+        JOptionPane.showMessageDialog(this, "Por favor, selecciona al menos una carrera.", "Error", JOptionPane.ERROR_MESSAGE);
+        return false;
+    }
+         if (cbFormacion.getSelectedIndex() == 0) {
+        JOptionPane.showMessageDialog(this, "Debe seleccionar una opción de Formación.");
+        return false;
+    }
+
+     //Verifica que se haya seleccionado una opción en Experiencia (que no sea el valor predeterminado "Seleccione")
+   if (cbExperiencia.getSelectedIndex() == 0) {
+        JOptionPane.showMessageDialog(this, "Debe seleccionar una opción de Experiencia.");
+       return false;
+    }
+
+    return true;
+}
     
    
     public BUSCADOR_TABLA() {
@@ -188,7 +209,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         cbContabilidad.setText("CONTABILIDAD");
         jPanel1.add(cbContabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, -1, -1));
 
-        cbFormacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TITULO UNIVERSITARIO", "BACHILLER", "TITULO TECNICO", "EGRESADO TECNICO", "ESTUDIANTE UNIVERSITARIO", " " }));
+        cbFormacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE", "TITULO UNIVERSITARIO", "BACHILLER", "TITULO TECNICO", "EGRESADO TECNICO", "ESTUDIANTE UNIVERSITARIO", " " }));
         cbFormacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbFormacionActionPerformed(evt);
@@ -216,7 +237,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         cbDiplomado.setText("DIPLOMADO");
         jPanel1.add(cbDiplomado, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
 
-        cbExperiencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 Año", "2 Años", "3 Años", "4 Años", "5 Años", "6 Años", "7 Años", "8 Años", "9 Años", "10 Años", " " }));
+        cbExperiencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONE", "1 Año", "2 Años", "3 Años", "4 Años", "5 Años", "6 Años", "7 Años", "8 Años", "9 Años", "10 Años", " " }));
         jPanel1.add(cbExperiencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, -1, -1));
 
         cbOfimatica.setBackground(new java.awt.Color(33, 44, 62));
@@ -276,36 +297,95 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BUSCARTALENTO(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BUSCARTALENTO
-    
+   
+     if (!validarCampos()) {
+        return; // Si la validación falla, no continuamos con la búsqueda
+    }    
+        
 // indicamos las consultas que hara nuestro programa en nuestra BD
      StringBuilder query = new StringBuilder("SELECT * FROM postulantes WHERE 1=1");
 //tomamos desiciones de acuerdo a las consultas de los items que tenemos como discriminante
-    if (cbDerecho.isSelected()) query.append(" AND CARRERAS LIKE '%DERECHO%'");
-    if (cbIngenieria.isSelected()) query.append(" AND CARRERAS LIKE '%INGENIERIA%'");
-    if (cbPsicologia.isSelected()) query.append(" AND CARRERAS LIKE '%PSICOLOGIA%'");
-    if (cbAdministracion.isSelected()) query.append(" AND CARRERAS LIKE '%ADMINISTRACION%'");
-    if (cbMedicina.isSelected()) query.append(" AND CARRERAS LIKE '%MEDICINA%'");
-    if (cbEducacion.isSelected()) query.append(" AND CARRERAS LIKE '%EDUCACIÓN%'");
-    if (cbEconomia.isSelected()) query.append(" AND CARRERAS LIKE '%ECONOMIA%'");
-    if (cbContabilidad.isSelected()) query.append(" AND CARRERAS LIKE '%CONTABILIDAD%'");
+    //tomamos desiciones de acuerdo a las consultas de los items que tenemos como discriminante
+    ArrayList<String> CARRERAS = new ArrayList<>();   
+    if (cbDerecho.isSelected()) CARRERAS.add("DERECHO");
+    if (cbIngenieria.isSelected()) CARRERAS.add("INGENIERIA");
+    if (cbPsicologia.isSelected()) CARRERAS.add("PSICOLOGIA");
+    if (cbAdministracion.isSelected()) CARRERAS.add("ADMINISTRACION");
+    if (cbMedicina.isSelected()) CARRERAS.add("MEDICINA");
+    if (cbEducacion.isSelected()) CARRERAS.add("EDUCACION");
+    if (cbEconomia.isSelected()) CARRERAS.add("ECONOMIA");
+    if (cbContabilidad.isSelected()) CARRERAS.add("CONTABILIDAD");
 
+    if (!CARRERAS.isEmpty()) {
+        query.append(" AND (");
+        for (int i = 0; i < CARRERAS.size(); i++) {
+            query.append("CARRERAS LIKE '%").append(CARRERAS.get(i)).append("%'");
+            if (i < CARRERAS.size() - 1) {
+                query.append(" OR ");
+            }
+        }
+        query.append(")");
+    }
+
+    // Formación académica (estricta)
     String formacion = cbFormacion.getSelectedItem().toString();
     query.append(" AND FORMACION = '").append(formacion).append("'");
 
-    if (cbmba.isSelected()) query.append(" AND CURSOS LIKE '%MBA%'");
-    if (cbMagister.isSelected()) query.append(" AND CURSOS LIKE '%MAGISTER%'");
-    if (cbDiplomado.isSelected()) query.append(" AND CURSOS LIKE '%DIPLOMADO%'");
+    // Cursos (estrictos, pero permite OR entre opciones seleccionadas)
+    ArrayList<String> cursos = new ArrayList<>();
+    if (cbmba.isSelected()) cursos.add("MBA");
+    if (cbMagister.isSelected()) cursos.add("MAGISTER");
+    if (cbDiplomado.isSelected()) cursos.add("DIPLOMADO");
 
+    if (!cursos.isEmpty()) {
+        query.append(" AND (");
+        for (int i = 0; i < cursos.size(); i++) {
+            query.append("CURSOS LIKE '%").append(cursos.get(i)).append("%'");
+            if (i < cursos.size() - 1) {
+                query.append(" OR ");
+            }
+        }
+        query.append(")");
+    }
+
+    // Experiencia laboral (estricta)
     String experiencia = cbExperiencia.getSelectedItem().toString();
     query.append(" AND EXPERIENCIA = '").append(experiencia).append("'");
 
-    if (cbOfimatica.isSelected()) query.append(" AND CONOCIMIENTOS LIKE '%OFIMATICA%'");
-    if (cbComputacion.isSelected()) query.append(" AND CONOCIMIENTOS LIKE '%COMPUTACION%'");
+    // Conocimientos (estrictos, pero permite OR entre opciones seleccionadas)
+    ArrayList<String> conocimientos = new ArrayList<>();
+    if (cbOfimatica.isSelected()) conocimientos.add("OFIMATICA");
+    if (cbComputacion.isSelected()) conocimientos.add("COMPUTACION");
 
-    if (cbIngles.isSelected()) query.append(" AND IDIOMAS LIKE '%INGLES%'");
-    if (cbChino.isSelected()) query.append(" AND IDIOMAS LIKE '%CHINO%'");
-    if (cbFrances.isSelected()) query.append(" AND IDIOMAS LIKE '%FRANCES%'");
-    if (cbPortugues.isSelected()) query.append(" AND IDIOMAS LIKE '%PORTUGUES%'");
+    if (!conocimientos.isEmpty()) {
+        query.append(" AND (");
+        for (int i = 0; i < conocimientos.size(); i++) {
+            query.append("CONOCIMIENTOS LIKE '%").append(conocimientos.get(i)).append("%'");
+            if (i < conocimientos.size() - 1) {
+                query.append(" OR ");
+            }
+        }
+        query.append(")");
+    }
+
+    // Idiomas (estrictos, pero permite OR entre opciones seleccionadas)
+    ArrayList<String> idiomas = new ArrayList<>();
+    if (cbIngles.isSelected()) idiomas.add("INGLES");
+    if (cbChino.isSelected()) idiomas.add("CHINO");
+    if (cbFrances.isSelected()) idiomas.add("FRANCES");
+    if (cbPortugues.isSelected()) idiomas.add("PORTUGUES");
+
+    if (!idiomas.isEmpty()) {
+        query.append(" AND (");
+        for (int i = 0; i < idiomas.size(); i++) {
+            query.append("IDIOMAS LIKE '%").append(idiomas.get(i)).append("%'");
+            if (i < idiomas.size() - 1) {
+                query.append(" OR ");
+            }
+        }
+        query.append(")");
+    }
+
 //usamos try para identificar a los que cumplen con la condicion y pedimos que nos brinde los datos que queremos de la BD y los guarde en arreglos
     try (Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
          PreparedStatement pstmt = conn.prepareStatement(query.toString());
@@ -331,8 +411,13 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
             results.add(row);
         }
 //mandamos a nuuestra ventana de salida
+         if (!results.isEmpty()) {
         ResultadoFormulario resultadoForm = new ResultadoFormulario(results);
         resultadoForm.setVisible(true);
+         } else {
+                JOptionPane.showMessageDialog(this, "No se encontraron resultados.");
+            }
+
 //si es que ocurre una desconexion con la BD alertamos con mensaje        
     } catch (SQLException e) {
         JOptionPane.showMessageDialog(this, "BASE DE DATOS SIN CONEXIÓN: " + e.getMessage());
