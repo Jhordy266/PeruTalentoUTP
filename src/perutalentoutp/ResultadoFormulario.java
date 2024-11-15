@@ -23,7 +23,15 @@ private JTable table;
 
         // Configuramos la tabla para indicar que se mostrara
         String[] columnNames = {"Nombres","Apellido Paterno","Apellido Materno","Edad", "Carrera", "Formación", "Curso", "Conocimiento", "Experiencia", "Idioma", "WhatsApp", "Telefono", "Perfil Linkedln"};
-        DefaultTableModel model = new DefaultTableModel(columnNames, 0);
+        
+        // Creamos el modelo de la tabla con una clase anónima para que no sea editable
+        DefaultTableModel model = new DefaultTableModel(columnNames, 0) {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; // Hacer todas las celdas no editables
+            }
+        };
+    
         table = new JTable(model);
                
           // Agregar datos a la tabla de la BD
