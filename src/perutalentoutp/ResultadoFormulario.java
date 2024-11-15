@@ -3,11 +3,16 @@ package perutalentoutp;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.net.URI;
+import javax.swing.table.TableCellRenderer;
+import java.awt.*;
+
 /**
  *
  * @author Franco RM
  */
-
 
 public class ResultadoFormulario extends javax.swing.JFrame {
 
@@ -31,21 +36,56 @@ private JTable table;
                 return false; // Hacer todas las celdas no editables
             }
         };
-    
+        
+        
         table = new JTable(model);
                
           // Agregar datos a la tabla de la BD
         for (String[] row : resultados) {
             model.addRow(row);
+        }        
+    table.addMouseListener(new MouseAdapter() {
+        public void mouseClicked(MouseEvent e) {
+        int column = table.columnAtPoint(e.getPoint());
+        int row = table.rowAtPoint(e.getPoint());
+        if (column == 10 || column == 12) { // Columnas de WhatsApp y LinkedIn
+            String url = (String) table.getValueAt(row, column);
+            openWebpage(url);
         }
-
+    }
+});
+        table.getColumnModel().getColumn(10).setCellRenderer(new LinkRenderer());
+        table.getColumnModel().getColumn(12).setCellRenderer(new LinkRenderer());
+    
+        
+        
         // Agregar la tabla al formulario de salida
         add(new JScrollPane(table));
         setVisible(true);
         
+    }   
+    
+    private void openWebpage(String url) {
+        try {
+            Desktop.getDesktop().browse(new URI(url));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "No se pudo abrir el enlace: " + url);
+        }
     }
     
-    
+     private static class LinkRenderer extends JLabel implements TableCellRenderer {
+
+        public LinkRenderer() {
+            setForeground(Color.BLUE.darker());
+            setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        }
+
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+            setText((String) value);
+            return this;
+        }
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -65,9 +105,7 @@ private JTable table;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
     
-
     // Método main
      public static void main(String args[]) {
        //usamos los arreglos de array para que imprima y guarde la busqueda  
