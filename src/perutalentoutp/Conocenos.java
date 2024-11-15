@@ -55,8 +55,6 @@ public class Conocenos extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         BtnVolver = new javax.swing.JButton();
         lblmision2 = new javax.swing.JLabel();
-        LblCerrar = new javax.swing.JLabel();
-        LblMinimizar = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         BtnFacebook = new javax.swing.JButton();
         BtnWhatsapp = new javax.swing.JButton();
@@ -206,20 +204,6 @@ public class Conocenos extends javax.swing.JFrame {
         lblmision2.setForeground(new java.awt.Color(255, 255, 255));
         lblmision2.setText("CONOCENOS");
 
-        LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CerrarEV.png"))); // NOI18N
-        LblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LblCerrarMouseClicked(evt);
-            }
-        });
-
-        LblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/MinimizarEV.png"))); // NOI18N
-        LblMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LblMinimizarMouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -228,15 +212,8 @@ public class Conocenos extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(lblmision2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(LblMinimizar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(LblCerrar)
-                        .addGap(30, 30, 30))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(BtnVolver)
-                        .addGap(21, 21, 21))))
+                .addComponent(BtnVolver)
+                .addGap(21, 21, 21))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,11 +222,7 @@ public class Conocenos extends javax.swing.JFrame {
                 .addComponent(lblmision2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LblCerrar)
-                    .addComponent(LblMinimizar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(39, 39, 39)
                 .addComponent(BtnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 8, Short.MAX_VALUE))
         );
@@ -379,28 +352,6 @@ public class Conocenos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BtnWhatsappActionPerformed
 
-    private void LblCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblCerrarMouseClicked
-        //cogido para preguntar si se desea salir o no del programa
-        int respuesta = JOptionPane.showConfirmDialog(
-            Conocenos.this,
-            "¿Deseas realmente salir?",
-            "Confirmación",
-            JOptionPane.YES_NO_OPTION
-        );
-
-        if (respuesta == JOptionPane.YES_OPTION) {
-            dispose(); // Cierra la ventana y libera los recursos
-            System.exit(0); // Termina la aplicación
-        }
-
-    }//GEN-LAST:event_LblCerrarMouseClicked
-
-    private void LblMinimizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LblMinimizarMouseClicked
-        // TODO add your handling code here:
-
-        this.setExtendedState(ICONIFIED); // PARA MINIMIZAR EL PROGRAMA
-    }//GEN-LAST:event_LblMinimizarMouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -442,8 +393,6 @@ public class Conocenos extends javax.swing.JFrame {
     private javax.swing.JButton BtnInstagram;
     private javax.swing.JButton BtnVolver;
     private javax.swing.JButton BtnWhatsapp;
-    private javax.swing.JLabel LblCerrar;
-    private javax.swing.JLabel LblMinimizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -3,11 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Randall/OneDrive/Documentos/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Conocenos.java</file>
-            <file>file:/C:/Users/Randall/OneDrive/Documentos/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/CONECTAR.java</file>
-            <file>file:/C:/Users/Randall/OneDrive/Documentos/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Prueba.java</file>
-            <file>file:/C:/Users/Randall/OneDrive/Documentos/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Contacto.java</file>
-            <file>file:/C:/Users/Randall/OneDrive/Documentos/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/BUSCADOR_TABLA.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/BUSCADOR_TABLA.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/PRUEBAMYSQL.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Conocenos.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/CambioContraseña.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/CONECTARPRUEBALOGIN.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/BuscarPersonaGUI.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Login2.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/ResultadoFormulario.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/CONECTAR.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Contacto.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Prueba.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/InicioCarga.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/MenuPrincipal.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Buscador.java</file>
+            <file>file:/C:/Users/Deybi/Documents/NetBeansProjects/PeruTalentoUTP/src/perutalentoutp/Login.java</file>
         </group>
     </open-files>
 </project-private>

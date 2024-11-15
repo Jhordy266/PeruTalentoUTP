@@ -110,7 +110,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         jPanel1.add(jbBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 160, -1));
 
         jbRegresar.setBackground(new java.awt.Color(255, 51, 51));
-        jbRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        jbRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/VolverEV.png"))); // NOI18N
         jbRegresar.setText("REGRESAR");
         jbRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jbRegresar.setMaximumSize(new java.awt.Dimension(137, 36));
@@ -248,7 +248,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         });
         jPanel1.add(cbPortugues, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
 
-        LblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menos.png"))); // NOI18N
+        LblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/MinimizarEV.png"))); // NOI18N
         LblMinimizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LblMinimizarMouseClicked(evt);
@@ -256,7 +256,7 @@ public class BUSCADOR_TABLA extends javax.swing.JFrame {
         });
         jPanel1.add(LblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 10, 20, 20));
 
-        LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cancelar (1).png"))); // NOI18N
+        LblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CerrarEV.png"))); // NOI18N
         LblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LblCerrarMouseClicked(evt);

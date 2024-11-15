@@ -268,7 +268,7 @@ public class CambioContraseña extends javax.swing.JFrame {
 
         BtnAceptar.setBackground(new java.awt.Color(255, 51, 51));
         BtnAceptar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BtnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/atras.png"))); // NOI18N
+        BtnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/VolverEV.png"))); // NOI18N
         BtnAceptar.setText("REGRESAR");
         BtnAceptar.setToolTipText("");
         BtnAceptar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -282,7 +282,7 @@ public class CambioContraseña extends javax.swing.JFrame {
                 BtnAceptarActionPerformed(evt);
             }
         });
-        jPanel1.add(BtnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 110, -1));
+        jPanel1.add(BtnAceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 110, 40));
 
         BtnAceptar1.setBackground(new java.awt.Color(65, 170, 174));
         BtnAceptar1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
