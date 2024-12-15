@@ -16,10 +16,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-/**
- *
- * @author Charly Cimino
- */
 public class Login2 extends javax.swing.JFrame {
 
     public Login2() {
@@ -267,7 +263,7 @@ public class Login2 extends javax.swing.JFrame {
                 // Si hay texto, cambiar al siguiente campo de texto
                 TxtContraseña.requestFocus();
 
-            }
+            } 
         }
 
     }//GEN-LAST:event_TxtUsuarioKeyPressed
@@ -441,9 +437,7 @@ public class Login2 extends javax.swing.JFrame {
     }
 // METODO VALIDAR INGRESO - FIN
 
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -305,7 +305,7 @@ private boolean validarCampos() {
 // indicamos las consultas que hara nuestro programa en nuestra BD
      StringBuilder query = new StringBuilder("SELECT * FROM postulantes WHERE 1=1");
 //tomamos desiciones de acuerdo a las consultas de los items que tenemos como discriminante
-    //tomamos desiciones de acuerdo a las consultas de los items que tenemos como discriminante
+
     ArrayList<String> CARRERAS = new ArrayList<>();   
     if (cbDerecho.isSelected()) CARRERAS.add("DERECHO");
     if (cbIngenieria.isSelected()) CARRERAS.add("INGENIERIA");

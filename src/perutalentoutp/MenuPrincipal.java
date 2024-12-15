@@ -231,7 +231,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
             "¿Deseas realmente salir?",  // El segundo parámetro es el mensaje que se muestra al usuario.
             "Confirmación", // El tercer parámetro es el título de la ventana del diálogo.
             JOptionPane.YES_NO_OPTION // El cuarto parámetro define los botones disponibles en el diálogo
-         
+                        
         );
 
         if (respuesta == JOptionPane.YES_OPTION) {

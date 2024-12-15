@@ -57,8 +57,9 @@ private JTable table;
         table.getColumnModel().getColumn(10).setCellRenderer(new LinkRenderer());
         table.getColumnModel().getColumn(12).setCellRenderer(new LinkRenderer());
     
+        /************ DEYBI - FIN **************************/
         
-        
+        /************ JHORDY - INICIO *********************/
         // Agregar la tabla al formulario de salida
         add(new JScrollPane(table));
         setVisible(true);

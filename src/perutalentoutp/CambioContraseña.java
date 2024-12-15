@@ -1,29 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package perutalentoutp;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.Connection; //utiliza para establecer una conexión con una base de datos.
+import java.sql.DriverManager; //Es gestionar y registrar los controladores JDBC para conectar Java con una base de datos.
+import java.sql.PreparedStatement;//acilita la ejecución de consultas parametrizadas (como SELECT, INSERT, UPDATE),
+import java.sql.ResultSet; //Se utiliza para manejar el conjunto de resultados devueltos por una consulta SQL. Almacena y permite acceder a los datos devueltos por sentencias como SELECT.
+import java.sql.SQLException; //Permite manejar errores y excepciones cuando se trabaja con operaciones de base de datos.
 import javax.swing.JOptionPane;
-
+     // JAVAX: PERMITE PARA LIBRERIAS SUPLEMENTARIAS QUE NO FORMAN COMO PARTE DEL NUCLE DE JAVA (INTERF GRAF, ETC)
+     //SWING: para crear interfaces gráficas de usuario
+     // JOptionPane: Sirve para mostrar cuadros de diálogo en una aplicación gráfica.
 public class CambioContraseña extends javax.swing.JFrame {
-
-    /**
-     * Creates new form CambioContraseña
-     */
+                                
+    /*** Creates new form CambioContraseña */ 
     public CambioContraseña() {
         initComponents();
-        this.setLocationRelativeTo(null);/*CENTRAR EL JFRAME AUTOMATICAMENTE*/
-
+        this.setLocationRelativeTo(null);  /*CENTRAR EL JFRAME AUTOMATICAMENTE El sistema calculará automáticamente las coordenadas para centrar la ventana en la pantalla principal.*/
         this.ocultar.setVisible(false);
         this.ocultar1.setVisible(false);
         this.ocultar2.setVisible(false);
-
     }
 
     @SuppressWarnings("unchecked")
@@ -369,7 +364,7 @@ public class CambioContraseña extends javax.swing.JFrame {
         Login2 retornologin = new Login2();
         retornologin.setVisible(true);
         /*CIERRA EL FORMULARIO ACTUAL*/
-        this.dispose();
+        this.dispose(); // finaliza el  jframe pero no cierra el programa por completo 
 
     }//GEN-LAST:event_BtnAceptarMouseClicked
 
@@ -389,14 +384,15 @@ public class CambioContraseña extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnAceptar1ActionPerformed
 
     private void TxtContraseñaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TxtContraseñaFocusGained
-      //evento cuando el usuario hace clic en él o lo selecciona de alguna otra manera.
+     //Usé el método FocusGained porque permite limpiar el texto predeterminado del campo cuando el usuario interactúa con él. Es una solución práctica para guiar al usuario y facilitar la entrada de datos.
+        
         if (TxtContraseña.getText().equals("*****")) { 
             TxtContraseña.setText(""); // Borra el texto por defecto al hacer clic
         }
     }//GEN-LAST:event_TxtContraseñaFocusGained
 
     private void TxtContraseñaFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_TxtContraseñaFocusLost
-        // TODO add your handling code here:
+        // ESTE EVENTO ES CUANDO EL FOCO DEJA EL CUADRO DE TEXTO
         if (TxtContraseña.getText().isEmpty()) {  // Si el campo de la contraseña está vacío
             TxtContraseña.setText("*****"); // Reestablece el texto por defecto si está vacío       
         }
@@ -582,31 +578,44 @@ public class CambioContraseña extends javax.swing.JFrame {
         try {
             // Parámetros de conexión
             String url = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10742054";
+            //JDBC actúa como un puente entre una aplicación Java y una base de datos relacional.
             String dbUser = "sql10742054";
             String dbPassword = "c2HfX6vUVE";
 
             // Conexión a la base de datos
             Connection connection = DriverManager.getConnection(url, dbUser, dbPassword);
+            //devuelve la conexion con la base de datos a travez de esa variable 
 
             // Consulta SQL para verificar las credenciales
             String query = "SELECT * FROM sql10742054.usuarios WHERE NombreUsuario = ? AND contrasena = ?";
+            //los ? son marcadores de posicion que los datos se reemplazaran dinamicamente que se remplazaran                   con el uuario y contraseña cuando se hace la ejecucion 
+                // preguntar lo que tiene la base de datos
             PreparedStatement statement = connection.prepareStatement(query);
+      // atajo directo a la consulta (precompilar)   statement/variable) --- preparando la conexion con la que se tiene
             statement.setString(1, usuario);
+     // statement es una clase utilizada en JDBC para ejecutar consultas SQL directamente en una base de datos.
+     //asigna el valor de la variable usuario al primer ? de la consulta SQL preparada.
             statement.setString(2, contrasena);
+            //asigna el valor de la variable contraseña al segundo ? de la consulta SQL preparada.
             ResultSet resultSet = statement.executeQuery();
+            //executeQuery(): Ejecuta la consulta SQL preparada.
+                //ResultSet: Contiene las filas (datos) devueltas por la consulta.
             if (resultSet.next()) {
 
                 String queryUpdate = "UPDATE sql10742054.usuarios SET contrasena = ? WHERE NombreUsuario = ? AND contrasena = ?";
-
+                 //Si se encuentra una fila con el NombreUsuario y contrasena especificados, la contraseña                       se actualiza.
+                    //Si no coincide ninguna fila, no se realiza la actualización.
                 PreparedStatement statement2 = connection.prepareStatement(queryUpdate);
                 statement2.setString(1, contrasenactual);
                 statement2.setString(2, usuario);
                 statement2.setString(3, contrasena);
 
                 int filasActualizadas = statement2.executeUpdate();
+         //Devuelve un número entero que indica cuántas filas de la base de datos fueron afectadas por la consulta.
                 if (filasActualizadas > 0) {
-
-                    JOptionPane.showMessageDialog(this, "La contraseña se actualizó correctamente.");
+         //Verifica si al menos una fila fue afectada.
+         //Si es verdadero, significa que la consulta se ejecutó correctamente y se modificó al menos una fila.
+             JOptionPane.showMessageDialog(this, "La contraseña se actualizó correctamente.");
 
                     /* Ir al formulario Login2*/
                     Login2 retornologin = new Login2();
@@ -635,6 +644,8 @@ public class CambioContraseña extends javax.swing.JFrame {
             connection.close();
 
         } catch (SQLException e) {
+            //Se lanza cuando ocurre un error al interactuar con una base de datos mediante JDBC
+            //(E) A través de e, puedes obtener información detallada del error, como el mensaje, código de                 error, o estado SQL.
             JOptionPane.showMessageDialog(this, "Error al conectar con la base de datos: " + e.getMessage());
         }
     }
